@@ -7,8 +7,6 @@ This is the final version of the [nbody](https://en.wikipedia.org/wiki/N-body_si
 
 The original write up of my group, that also covers the amazing unity implementation of my group buddy, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
 
-The following will only summerize the simulation implemented in python.
-
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
 
