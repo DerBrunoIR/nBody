@@ -17,17 +17,18 @@ However, back then, it didn't played out as I planed, due to missing knowledge o
 
 At 1000 bodies, real time is merely reached.
 
-Nevertheless I got an self written render pipeline I could experiement with!
+Nevertheless I got an self written render pipeline I can experiement with!
 
 <image src="https://github.com/user-attachments/assets/48081a26-b385-4100-85cf-2f9ac5d421c1" width="100%"/>
 
 Larger bodies are rendered larger whereas smaller bodies are rendered smaller.
 
-![image](https://github.com/user-attachments/assets/caf3472a-8707-4058-b4a3-2cd259ac8572)
+<image src="https://github.com/user-attachments/assets/caf3472a-8707-4058-b4a3-2cd259ac8572" width="100%">
 
 Now let's check weather attraction works indeed!
 
 https://github.com/user-attachments/assets/d1819951-c1f5-40de-b254-a3481bce092e
+
 
 
 
