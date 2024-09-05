@@ -43,41 +43,41 @@ def convert_planets_to_image(dt, global_positions, global_velocities, global_mas
         vel = global_velocities[n]
         mass = global_masses[n]
 
-        # DREHUNG
-        #angle = dt / 1000
-        # turn around x axis
-        # pos[1] = math.cos(angle) * y - math.sin(angle) * z
-        # pos[2] = math.sin(angle) * y + math.cos(angle) * z
-        # turn around y axis
-        #pos[0] = math.cos(angle) * pos[0] + math.sin(angle) * pos[2]
-        #pos[2] = -math.sin(angle) * pos[0] + math.cos(angle) * pos[2]
-        # turn around z axis
-        # pos[0] = math.cos(angle) * x - math.sin(angle) * y
-        # pos[1] = math.sin(angle) * x + math.cos(angle) * y
+        if dim == 3:
+            # DREHUNG
+            angle = dt / 100000
+            # turn around x axis
+            # pos[1] = math.cos(angle) * y - math.sin(angle) * z
+            # pos[2] = math.sin(angle) * y + math.cos(angle) * z
+            # turn around y axis
+            pos[0] = math.cos(angle) * pos[0] + math.sin(angle) * pos[2]
+            pos[2] = -math.sin(angle) * pos[0] + math.cos(angle) * pos[2]
+            # turn around z axis
+            # pos[0] = math.cos(angle) * x - math.sin(angle) * y
+            # pos[1] = math.sin(angle) * x + math.cos(angle) * y
 
 
         # calculate pixel color
         squared_rad = MINIMAL_DISTANCE
-        background = (0x38, 0x3e, 0x70)
-        color1 = (0xf0, 0x9e, 0x00)
-        color2 = (0xf0, 0xd8, 0x00)
-        color3 = (255, 0, 0x0b)
-        wght = 15
-        distr = (0, .5 * wght, 1 * wght, math.inf)
+        color0 = (0, 0, 0)
+        color1 = (0xf0, 0x8f, 0x00)
+        color2 = (0xf0, 0x66, 0x00)
+        color3 = (0xf0, 0x3c, 0x00)
+        distr = (0.01 * mass, 0.05 * mass, 0.1 * mass, math.inf)
 
         for i in range(2):
             squared_rad += (pos[i] - local_pixel_position[i])**2
         #squared_rad += 0.002 * pos[2]**2
         w = mass / math.sqrt(squared_rad)
 
-        local_pixel_color[0] += rclamp(background[0], color1[0], distr[0], distr[1], w) + rclamp(color1[0], color2[0], distr[1], distr[2], w) + rsclamp(color2[0], color3[0], distr[2], distr[3], w)
-        local_pixel_color[1] += rclamp(background[1], color1[1], distr[0], distr[1], w) + rclamp(color1[1], color2[1], distr[1], distr[2], w) + rsclamp(color2[1], color3[1], distr[2], distr[3], w)
-        local_pixel_color[2] += rclamp(background[2], color1[2], distr[0], distr[1], w) + rclamp(color1[2], color2[2], distr[1], distr[2], w) + rsclamp(color2[2], color3[2], distr[2], distr[3], w)
+        local_pixel_color[0] += rclamp(color0[0], color1[0], distr[0], distr[1], w) + rclamp(color1[0], color2[0], distr[1], distr[2], w) + rsclamp(color2[0], color3[0], distr[2], distr[3], w)
+        local_pixel_color[1] += rclamp(color0[1], color1[1], distr[0], distr[1], w) + rclamp(color1[1], color2[1], distr[1], distr[2], w) + rsclamp(color2[1], color3[1], distr[2], distr[3], w)
+        local_pixel_color[2] += rclamp(color0[2], color1[2], distr[0], distr[1], w) + rclamp(color1[2], color2[2], distr[1], distr[2], w) + rsclamp(color2[2], color3[2], distr[2], distr[3], w)
 
     local_pixel_color[3] = 255 * count_of_bodies
 
     for i in range(global_image.shape[2]):
-        local_pixel_color[i] = min(1, max(local_pixel_color[i] / (255 * count_of_bodies), 0))
+        local_pixel_color[i] = min(1, max(local_pixel_color[i] / (255), 0))
     
     for i in range(global_image.shape[2]):
         global_image[y_idx][x_idx][i] = local_pixel_color[i]

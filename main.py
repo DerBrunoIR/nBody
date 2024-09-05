@@ -112,16 +112,59 @@ def random_universum_factory(width, height, n, dim):
     velocities = (np.random.random(size) - 0.5) * 2
     velocities *= 0
     # velocities = np.zeros_like(positions)
-    masses = np.random.random(n) * m_konst
+    masses = (np.random.random(n) / 2 + 0.5) * 1000
     image_buffer = np.zeros((width, height, 4))
     return Universum.from_np_arr(positions, velocities, masses, image_buffer)
 
 def universe_factory():
-    return random_universum_factory(*[400, 400], 100, 3)
+    return random_universum_factory(*[1000, 1000], 20, 2)
 
+def two_body_factory(width, height):
+    size = (2, 2)
+    positions = np.array([[-500, 0], [500, 0]])
+    velocities = np.array([[0, 5],[0, -10]])
+    masses = np.array([5000, 1000])
+    image_buffer = np.zeros((width, height, 4))
+    return Universum.from_np_arr(positions, velocities, masses, image_buffer)
+
+def three_body_factory(width, height):
+    size = (3, 2)
+    positions = np.array([[-500, 0], [500, 0], [0, 0]])
+    velocities = np.array([[0, 16],[0, -16], [0, 0]])
+    masses = np.array([20000, 20000, 20000])
+    image_buffer = np.zeros((width, height, 4))
+    return Universum.from_np_arr(positions, velocities, masses, image_buffer)
+
+def three_body_3d_factory(width, height):
+    size = (3, 3)
+    positions = np.array([[-500, 0, 0], [500, 0, 0], [0, 0, 0]])
+    velocities = np.array([[0, 16, 0],[0, -16, 0], [0, 0, 0]])
+    masses = np.array([20000, 20000, 20000])
+    image_buffer = np.zeros((width, height, 4))
+    return Universum.from_np_arr(positions, velocities, masses, image_buffer)
+
+# TODO not spiraling
+def spiral_factory(width, height, n):
+    size = (n, 3)
+    positions = 10 * min(width, height) * (np.random.random(size) - 0.5) 
+    velocities = []
+    for pos in positions:
+        vel = np.array([-pos[1], pos[0], 0])
+        vel = 10 / np.linalg.norm(vel) * vel 
+        velocities.append(vel)
+    velocities = np.array(velocities)
+    masses = np.array([50000] * n)
+    image_buffer = np.zeros((width, height, 4))
+    assert len(velocities) == len(positions) == len(masses) == n
+    assert velocities.shape == positions.shape == size
+    return Universum.from_np_arr(positions, velocities, masses, image_buffer)
 
 if __name__ == "__main__":
-    res = np.array([1200, 1200], dtype=int)
+    res = np.array([1000, 1000], dtype=int)
     game = Game(*res, record=True)
-    game.add_gameobject(UniverseGameObject(universe_factory()))
+    # game.add_gameobject(UniverseGameObject(universe_factory()))
+    # game.add_gameobject(UniverseGameObject(two_body_factory(1000, 1000)))
+    game.add_gameobject(UniverseGameObject(three_body_3d_factory(1000, 1000)))
+    # game.add_gameobject(UniverseGameObject(three_body_factory(1000, 1000)))
+    # game.add_gameobject(UniverseGameObject(spiral_factory(1000, 1000, 500)))
     game.run()
