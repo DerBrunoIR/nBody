@@ -36,18 +36,10 @@ For `1000x1000` pixels we have `10**6` pixels per frame.
 https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
 
 
+Trying to solve the famous [three body problem](https://en.wikipedia.org/wiki/Three-body_problem).
 
 
-
-#
-At the end, the simulation has been fully implemented in python and includes the following features:
-- simple 2d camera control, 
-- supports 2d and 3d simulation space
-- video recording, screenshots
-- custom cuda shaders for rendering and force calculations (achieved in python via `numba.cuda`)
+https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 
 
-
-
-
-
+Thanks for reading!
