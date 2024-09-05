@@ -19,8 +19,6 @@ Instead I shifted focus to develope some nice looking shaders.
 
 Larger bodies are rendered larger whereas smaller bodies are rendered smaller.
 
-<image src="https://github.com/user-attachments/assets/caf3472a-8707-4058-b4a3-2cd259ac8572" width="100%">
-
 Now let's check weather attraction works indeed!
 
 https://github.com/user-attachments/assets/d1819951-c1f5-40de-b254-a3481bce092e
