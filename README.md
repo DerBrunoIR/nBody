@@ -31,7 +31,7 @@ Gpu's are able to deal with that, however data takes some time to travle between
 https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
 
 Shaders are executed in parallel, don't forget to synchronize your threads before accessing shared data.
-Those bugs are painfully to debug.
+Those bugs can be difficult to detect.
 
 https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 
