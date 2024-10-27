@@ -38,3 +38,7 @@ https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 The [three body problem](https://en.wikipedia.org/wiki/Three-body_problem) has no analytical solutions. 
 
 The End
+
+# How to run
+
+First you need a CUDA capable GPU.
