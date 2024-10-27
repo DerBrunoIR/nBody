@@ -42,6 +42,8 @@ The End
 # How to run
 
 First you need a CUDA capable GPU.
+
+Then you can install dependencies and run the application as following:
 ```bash
 cd ./nbody
 pip install -r ./requirements.txt
