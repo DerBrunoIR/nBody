@@ -42,3 +42,12 @@ The End
 # How to run
 
 First you need a CUDA capable GPU.
+```bash
+cd ./nbody
+pip install -r ./requirements.txt
+python3 main.py
+```
+You can also change the run configuration inside of `main.py`.
+
+
+
