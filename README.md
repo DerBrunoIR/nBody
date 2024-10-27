@@ -50,7 +50,8 @@ pip install -r ./requirements.txt
 python3 main.py
 ```
 You can also change the run configuration inside of `main.py`.
-Videos will be saved to the location `./nbody/videos/` if available (`game.py`).
+
+Videos will be saved to the location `./nbody/videos/` if existing (see `game.py`).
 
 
 
