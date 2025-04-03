@@ -2,9 +2,11 @@
 
 # N-Body simulation
 
-
 This is the final version of the [nbody](https://en.wikipedia.org/wiki/N-body_simulation) simulation I made in my first year at my university.
-The original write up of my group, that also covers the amazing unity implementation of my group buddy, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
+The original write up of my group, that also covers the amazing unity implementation of my group buddy using hsl shader language instead of cuda, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
+We both developed individually a nbody simulation using different technologies.
+
+By trying to extend the render pipeline I learned a lot about parallel computing and structuring software projects.
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
 
@@ -20,6 +22,7 @@ This kind of rendering is possible by calculating the color of each pixel indivi
 With a mathematical function we can describe the shape and color of each body.
 
 https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
+(git hub requires video compression)
 
 The usage of thread shared gpu memory requires synchronization of all threads.
 
