@@ -32,7 +32,7 @@ Here we can see the accumulating error of the euler iteration, as the middle bod
 
 https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 
-The [three body problem](https://en.wikipedia.org/wiki/Three-body_problem) can only solved approximational. 
+The [three body problem](https://en.wikipedia.org/wiki/Three-body_problem) can only solved by approximation. 
 
 # How to run
 
