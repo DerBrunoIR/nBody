@@ -8,6 +8,7 @@ We both developed individually a nbody simulation using different technologies.
 
 The original write up of my group, that also covers the amazing unity implementation from Lennart using hsl shader language and Unity instead of cuda and python, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
 At that time, python was the language I knew the best and I wanted to explore associated limitations.
+We even injected some CSS into the wikipage to make it look better.
 
 By trying to extend the render pipeline I learned a lot about parallel computing and structuring software projects and debugging race conditions.
 
