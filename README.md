@@ -22,6 +22,7 @@ This kind of rendering is possible by calculating the color of each pixel indivi
 With a mathematical function we can describe the shape and color of each body.
 
 https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
+
 (git hub requires video compression)
 
 The usage of thread shared gpu memory requires synchronization of all threads.
