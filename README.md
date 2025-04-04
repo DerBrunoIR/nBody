@@ -11,7 +11,7 @@ We even injected some CSS into the wiki page to make it look better :).
 At that time, Python was the language I knew the best, and I wanted to explore associated limitations.
 
 
-By trying to extend the render pipeline, I learned a lot about parallel computing, structuring software projects and debugging race conditions.
+By trying to extend the render pipeline of the game library PyGame, I learned a lot about parallel computing, structuring software projects and debugging race conditions.
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
 
