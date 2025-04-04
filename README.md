@@ -7,8 +7,9 @@ Mathesis is a course for beginners to learn programming in Python and includes a
 We both developed individually a N-body simulation using different technologies.
 
 The original write-up of my group, which also covers the amazing Unity implementation from Lennart using the HSL Shader language and Unity instead of CUDA and Python, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
+We even injected some CSS into the wiki page to make it look better :).
 At that time, Python was the language I knew the best, and I wanted to explore associated limitations.
-We even injected some CSS into the wiki page to make it look better.
+
 
 By trying to extend the render pipeline, I learned a lot about parallel computing, structuring software projects and debugging race conditions.
 
