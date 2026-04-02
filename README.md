@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
 
 (GitHub requires video compression.)
 
-Here we can see the accumulating errors, as a initially stable system slowley moves towards a chaotic one.
+Here we can see the accumulating errors, as an initially stable system slowley moves towards a chaotic one.
 
 https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 
