@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
 
 (GitHub requires video compression.)
 
-Here we can see the accumulating error of the Euler iteration, as the middle body slowly starts moving.
+Here we can see the accumulating errors, as a initially stable system slowley moves towards a chaotic one.
 
 https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 
@@ -48,7 +48,7 @@ python3 main.py
 ```
 You can also change the initial configuration inside `main.py`.
 
-Videos will be saved to the location `./nbody/videos/` if the location `videos` exists (see `game.py`).
+Videos will be saved to the location `./nbody/videos/` if the directory `videos` exists (see `game.py`).
 
 
 
