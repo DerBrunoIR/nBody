@@ -41,7 +41,7 @@ Here we can see the accumulating errors, as an initially stable system slowley m
 
 https://github.com/user-attachments/assets/f5f58a3d-42d9-480e-9ea8-3eed9565f8c7
 
-The [three-body problem](https://en.wikipedia.org/wiki/Three-body_problem) can only be solved by approximation. 
+The [three-body problem](https://en.wikipedia.org/wiki/Three-body_problem) has no closed form solution. 
 
 # How to run
 
