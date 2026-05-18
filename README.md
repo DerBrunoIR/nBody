@@ -45,7 +45,7 @@ The [three-body problem](https://en.wikipedia.org/wiki/Three-body_problem) has n
 
 # How to run
 
-First, you need a CUDA-capable GPU and install the requirements from the python package numba.cude.
+First, you need a CUDA-capable GPU and install the requirements from the python package numba.cuda.
 
 Then you can install dependencies and run the application as following:
 ```bash
