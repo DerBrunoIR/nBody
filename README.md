@@ -17,7 +17,7 @@ By subdividing needed functionality into separate shaders (image rendering, grav
 The library `pygame` conviniently provides functionality for interactivity (mouse, keyboard) and rendering images stored in CPU memory.
 Unfortunatly, sending data between CPU and GPU is rather expensive, as shader outputs are stored in GPU memory. 
 By comparing the framerates of my simulation to Lennarts simulation (Unity render pipeline) and benchmarking specific components, I confirmed that the render pipeline has optimization potential.
-Over the entiere project I had fun experiementing with the shader code.
+Over the entiere project I experiemented a lot with the visualization of rendering point masses.
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
 
