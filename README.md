@@ -2,7 +2,7 @@
 
 # N-Body simulation
 
-My fellow student Lennart and I decided to implement a solver for the [n body](https://en.wikipedia.org/wiki/N-body_simulation) problem, using Euler iteration, as our free project. 
+In 2022, Lennart and I decided to implement a solver for the [n body](https://en.wikipedia.org/wiki/N-body_simulation) problem, using Euler iteration, as our free project. 
 Mathesis is a course for beginners to learn programming in Python and includes a project of choice as final homework. 
 We both developed individually a N-body simulation using different technologies.
 
