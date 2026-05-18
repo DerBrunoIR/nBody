@@ -9,13 +9,15 @@ We both developed individually a N-body simulation using different technologies.
 The original write-up of my group, which also covers the amazing Unity implementation from Lennart using the HSL Shader language and Unity instead of CUDA and Python, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
 We even injected some CSS into the wiki page to make it look better :).
 
-Without any prior-knowledge I was able to implement an interactive viewer showing a nBody simulation.
+Without any prior-knowledge about GPU programming, I was able to implement an interactive viewer showing a stream of GPU computed images displaying a nBody simulation.
 At that time, Python was my favorite programming language and I wanted to limit test the capabilities of the python ecosystem.
 A newly discovered python library able to compile python functions to CUDA compute shaders emphasized this curiosity.
 Only a basic subset of python features was actually supported by the compiler, i.e. programmers could only call a predifined subset of python functions within shaders. 
 By subdividing needed functionality into separate shaders (image rendering, gravity, vector-add-mul) and call them in specific sequences, I was able to reduce shader code complexity.
-The library `pygame` provides functionality for interactivity (mouse, keyboard) and rendering the images produced by the compute shaders.
-In the end I had a lot of fun experimenting with my render shader for point masses.
+The library `pygame` conviniently provides functionality for interactivity (mouse, keyboard) and rendering images stored in CPU memory.
+Unfortunatly, sending data between CPU and GPU is rather expensive, as shader outputs are stored in GPU memory. 
+By comparing the framerates of my simulation to Lennarts simulation that uses the Unity render pipeline, and benchmarking specific components, I confirmed that this render pipeline has optimization potential.
+Over the entiere project I had fun experiementing with the shader code.
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
 
