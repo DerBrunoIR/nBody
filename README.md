@@ -31,6 +31,7 @@ https://github.com/user-attachments/assets/d1819951-c1f5-40de-b254-a3481bce092e
 This kind of rendering is possible by calculating the color of each pixel individually.
 
 With a mathematical function we can describe the shape and color of each body.
+As there are no collisions, high density areas tend to disperse.
 
 https://github.com/user-attachments/assets/2c64cb13-8efb-456c-bfa6-250179ef719f
 
