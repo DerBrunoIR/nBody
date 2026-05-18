@@ -6,8 +6,7 @@ In 2022, Lennart and I decided to implement a solver for the [n body](https://en
 Mathesis is a course for beginners to learn programming in Python and includes a project of choice as final homework. 
 We both developed individually a N-body simulation using different technologies.
 
-The original write-up of my group, which also covers the amazing Unity implementation from Lennart using the HSL Shader language and Unity instead of CUDA and Python, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
-We even injected some CSS into the wiki page to make it look better :).
+The original write-up of my group can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation). There, you can see unity simulating 70k bodies in the background. We even injected some CSS into the wiki page to make it look better :).
 
 Without any prior-knowledge about GPU programming, I was able to implement an interactive viewer showing a stream of GPU computed images displaying a nBody simulation.
 At that time, Python was my favorite programming language and I wanted to limit test the capabilities of the python ecosystem.
