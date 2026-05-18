@@ -16,7 +16,7 @@ Only a basic subset of python features was actually supported by the compiler, i
 By subdividing needed functionality into separate shaders (image rendering, gravity, vector-add-mul) and call them in specific sequences, I was able to reduce shader code complexity.
 The library `pygame` conviniently provides functionality for interactivity (mouse, keyboard) and rendering images stored in CPU memory.
 Unfortunatly, sending data between CPU and GPU is rather expensive, as shader outputs are stored in GPU memory. 
-By comparing the framerates of my simulation to Lennarts simulation that uses the Unity render pipeline, and benchmarking specific components, I confirmed that this render pipeline has optimization potential.
+By comparing the framerates of my simulation to Lennarts simulation (Unity render pipeline) and benchmarking specific components, I confirmed that the render pipeline has optimization potential.
 Over the entiere project I had fun experiementing with the shader code.
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
