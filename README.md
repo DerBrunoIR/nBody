@@ -8,10 +8,14 @@ We both developed individually a N-body simulation using different technologies.
 
 The original write-up of my group, which also covers the amazing Unity implementation from Lennart using the HSL Shader language and Unity instead of CUDA and Python, can be found [here](https://www.mintgruen.tu-berlin.de/mathesisWiki/doku.php?id=ws2122:nbody:n-body-simulation).
 We even injected some CSS into the wiki page to make it look better :).
-At that time, Python was the language I knew the best, and I wanted to explore associated limitations.
 
-
-By trying to extend the render pipeline of the game library PyGame, I learned a lot about parallel computing, structuring software projects and debugging race conditions.
+Without any prior-knowledge I was able to implement an interactive viewer showing a nBody simulation.
+At that time, Python was my favorite programming language and I wanted to limit test the capabilities of the python ecosystem.
+A newly discovered python library able to compile python functions to CUDA compute shaders emphasized this curiosity.
+Only a basic subset of python features was actually supported by the compiler, i.e. programmers could only call a predifined subset of python functions within shaders. 
+By subdividing needed functionality into separate shaders (image rendering, gravity, vector-add-mul) and call them in specific sequences, I was able to reduce shader code complexity.
+The library `pygame` provides functionality for interactivity (mouse, keyboard) and rendering the images produced by the compute shaders.
+In the end I had a lot of fun experimenting with my render shader for point masses.
 
 <image src="https://github.com/user-attachments/assets/2f52cb1e-14fc-453a-8d95-3860b2867d7e" width="100%"/>
 
